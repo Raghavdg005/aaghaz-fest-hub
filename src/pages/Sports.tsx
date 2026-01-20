@@ -5,146 +5,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const sportsEvents = [
-  {
-    name: "Football 7v7",
-    icon: "⚽",
-    date: "5–8 Feb",
-    fee: "₹500/team",
-    teamSize: "7 players + 4 substitutes",
-    format: "Knockout Tournament",
-    contacts: [
-      { name: "Aadi Joshi", phone: "9625570511" },
-      { name: "Aarshi Agrawal", phone: "8630428820" },
-    ],
-    rules: [
-      "Two 15-minute halves with 5-minute break",
-      "Standard 7-a-side rules apply",
-      "Yellow card = 2-min suspension, Red = ejection",
-      "Teams must report 30 mins before match",
-    ],
-  },
-  {
-    name: "Basketball",
-    icon: "🏀",
-    date: "6–9 Feb",
-    fee: "₹400/team",
-    teamSize: "5 players + 3 substitutes",
-    format: "League + Knockout",
-    contacts: [
-      { name: "Priyanshu Bharti", phone: "8126271650" },
-      { name: "Vedanshi Panwar", phone: "8791945816" },
-    ],
-    rules: [
-      "4 quarters of 10 minutes each",
-      "FIBA rules apply",
-      "5 personal fouls = disqualification",
-      "Team must have matching jerseys",
-    ],
-  },
-  {
-    name: "Table Tennis",
-    icon: "🏓",
-    date: "7–10 Feb",
-    fee: "₹100 (Singles) | ₹200 (Doubles)",
-    teamSize: "Singles / Doubles",
-    format: "TT Supreme - Knockout",
-    contacts: [
-      { name: "Aadi Joshi", phone: "9625570511" },
-      { name: "Aarshi Agrawal", phone: "8630428820" },
-    ],
-    rules: [
-      "Best of 5 games (11 points each)",
-      "Men / Women / Mixed Doubles categories",
-      "Standard ITTF rules apply",
-      "Players must bring own rackets",
-    ],
-  },
-  {
-    name: "Badminton",
-    icon: "🏸",
-    date: "8–11 Feb",
-    fee: "₹100 (Singles) | ₹200 (Doubles)",
-    teamSize: "Singles / Doubles",
-    format: "Knockout",
-    contacts: [
-      { name: "Aadi Joshi", phone: "9625570511" },
-      { name: "Aarshi Agrawal", phone: "8630428820" },
-    ],
-    rules: [
-      "Best of 3 games (21 points each)",
-      "BWF rules apply",
-      "Shuttlecocks provided by organizers",
-      "15-minute warm-up before matches",
-    ],
-  },
-  {
-    name: "Athletics",
-    icon: "🏃",
-    date: "5–6 Feb",
-    fee: "₹50/event",
-    teamSize: "Individual",
-    format: "Track & Field Events",
-    contacts: [
-      { name: "Priyanshu Bharti", phone: "8126271650" },
-    ],
-    rules: [
-      "100m, 200m, 400m, relay events",
-      "Shot put, long jump, high jump",
-      "Age verification required",
-      "Proper athletic wear mandatory",
-    ],
-  },
-  {
-    name: "Chess",
-    icon: "♟",
-    date: "9–10 Feb",
-    fee: "₹100",
-    teamSize: "Individual",
-    format: "Swiss System",
-    contacts: [
-      { name: "Vedanshi Panwar", phone: "8791945816" },
-    ],
-    rules: [
-      "15+10 rapid format",
-      "FIDE rules apply",
-      "Touch-move rule enforced",
-      "No electronic devices allowed",
-    ],
-  },
-  {
-    name: "Volleyball",
-    icon: "🏐",
-    date: "6–8 Feb",
-    fee: "₹400/team",
-    teamSize: "6 players + 2 substitutes",
-    format: "Knockout",
-    contacts: [
-      { name: "Aadi Joshi", phone: "9625570511" },
-    ],
-    rules: [
-      "Best of 3 sets (25 points each)",
-      "Rally scoring system",
-      "6 rotations per set",
-      "Team uniforms required",
-    ],
-  },
-  {
-    name: "Carrom",
-    icon: "🎯",
-    date: "10–11 Feb",
-    fee: "₹50 (Singles) | ₹100 (Doubles)",
-    teamSize: "Singles / Doubles",
-    format: "Knockout",
-    contacts: [
-      { name: "Vedanshi Panwar", phone: "8791945816" },
-    ],
-    rules: [
-      "Best of 3 boards",
-      "25 points per board",
-      "ICF rules apply",
-      "Powder provided by organizers",
-    ],
-  },
+  { name: "7v7 Football", icon: "⚽", date: "5–8 Feb", fee: "₹500/team", format: "Knockout Tournament", slug: "football" },
+  { name: "TT Supreme", icon: "🏓", date: "5–8 Feb", fee: "₹100/₹200", format: "Singles & Doubles", slug: "table-tennis" },
+  { name: "Hoops", icon: "🏀", date: "5–8 Feb", fee: "₹500/team", format: "League + Knockout", slug: "basketball" },
+  { name: "Shuttle", icon: "🏸", date: "5–8 Feb", fee: "₹100/₹200", format: "Knockout", slug: "badminton" },
+  { name: "Athletics", icon: "🏃", date: "8 Feb", fee: "₹100/₹500", format: "Track & Field", slug: "athletics" },
+  { name: "Pawn", icon: "♟️", date: "5–8 Feb", fee: "₹500/team", format: "Team Chess", slug: "chess" },
+  { name: "Volley", icon: "🏐", date: "5–8 Feb", fee: "₹500/team", format: "Best of 3", slug: "volleyball" },
+  { name: "Goti", icon: "🎯", date: "5–8 Feb", fee: "₹100", format: "Knockout Singles", slug: "carrom" },
 ];
 
 const Sports = () => {
@@ -188,62 +56,39 @@ const Sports = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-6">
             {sportsEvents.map((event, index) => (
-              <motion.div
+              <Link
                 key={event.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="glass-card p-6 sm:p-8 border border-accent/20 hover:border-accent/50 transition-all group"
+                to={`/sports/${event.slug}`}
+                className="block"
               >
-                <div className="flex items-start gap-4 mb-6">
-                  <span className="text-5xl">{event.icon}</span>
-                  <div className="flex-1">
-                    <h3 className="font-display text-2xl font-bold text-accent mb-2">
-                      {event.name}
-                    </h3>
-                    <div className="flex flex-wrap gap-3 text-sm">
-                      <span className="flex items-center gap-1 text-muted-foreground">
-                        <Calendar className="w-4 h-4" /> {event.date}
-                      </span>
-                      <span className="flex items-center gap-1 text-muted-foreground">
-                        <IndianRupee className="w-4 h-4" /> {event.fee}
-                      </span>
-                      <span className="flex items-center gap-1 text-muted-foreground">
-                        <Users className="w-4 h-4" /> {event.teamSize}
-                      </span>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="glass-card p-6 sm:p-8 border border-accent/20 hover:border-accent/50 transition-all group h-full"
+                >
+                  <div className="flex items-start gap-4 mb-4">
+                    <span className="text-5xl">{event.icon}</span>
+                    <div className="flex-1">
+                      <h3 className="font-display text-2xl font-bold text-accent mb-2 group-hover:text-neon-gold transition-colors">
+                        {event.name}
+                      </h3>
+                      <div className="flex flex-wrap gap-3 text-sm">
+                        <span className="flex items-center gap-1 text-muted-foreground">
+                          <Calendar className="w-4 h-4" /> {event.date}
+                        </span>
+                        <span className="flex items-center gap-1 text-muted-foreground">
+                          <IndianRupee className="w-4 h-4" /> {event.fee}
+                        </span>
+                      </div>
                     </div>
+                    <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all" />
                   </div>
-                </div>
-
-                <div className="mb-6">
                   <p className="text-sm text-primary mb-2 font-semibold">{event.format}</p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    {event.rules.map((rule, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-accent">•</span>
-                        {rule}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="border-t border-white/10 pt-4">
-                  <p className="text-xs text-muted-foreground mb-2">Contact:</p>
-                  <div className="flex flex-wrap gap-4">
-                    {event.contacts.map((contact) => (
-                      <a
-                        key={contact.phone}
-                        href={`tel:${contact.phone}`}
-                        className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
-                      >
-                        <Phone className="w-3 h-3" />
-                        {contact.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
+                  <p className="text-sm text-muted-foreground">Click to view full rules & register →</p>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
