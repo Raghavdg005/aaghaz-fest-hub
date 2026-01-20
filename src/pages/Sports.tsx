@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Trophy, Phone, Calendar, Users, IndianRupee, ArrowLeft, ExternalLink } from "lucide-react";
+import { Trophy, Phone, Calendar, Users, IndianRupee, ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
