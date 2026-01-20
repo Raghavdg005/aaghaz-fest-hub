@@ -21,7 +21,7 @@ const VisualVerse = () => {
           title: "Format",
           items: [
             "Online submission via Instagram",
-            "Theme announced via Instagram",
+            "Theme announced via @aaghaz.gims",
             "Results on 11th February",
           ],
         },

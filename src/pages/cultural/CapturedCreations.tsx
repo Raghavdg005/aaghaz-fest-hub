@@ -29,7 +29,7 @@ const CapturedCreations = () => {
           title: "Requirements",
           items: [
             "Original content only",
-            "Tag official AAGHAZ Instagram",
+            "Tag @aaghaz.gims on Instagram",
             "Use designated hashtags",
           ],
         },

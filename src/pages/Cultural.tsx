@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Palette, Music, Drama, Sparkles, Phone, Calendar, ArrowLeft, ExternalLink } from "lucide-react";
+import { Palette, Calendar, ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,46 +13,11 @@ const clubs = [
     icon: "💃",
     color: "from-pink-500 to-purple-500",
     events: [
-      {
-        name: "Step-Up",
-        type: "Solo Dance",
-        date: "7th Feb",
-        fee: "₹100",
-        rules: [
-          "Time limit: 3-5 minutes",
-          "Any dance form allowed",
-          "Props allowed (no fire/water)",
-          "Tracks to be submitted 24hrs prior",
-        ],
-      },
-      {
-        name: "Yugma",
-        type: "Duet Dance",
-        date: "8th Feb",
-        fee: "₹150",
-        rules: [
-          "Time limit: 4-6 minutes",
-          "Any dance form or fusion",
-          "Costumes and props allowed",
-          "Synchronization is key",
-        ],
-      },
-      {
-        name: "Breakfree",
-        type: "Group Dance",
-        date: "9th Feb",
-        fee: "₹300",
-        rules: [
-          "Team size: 6-15 members",
-          "Time limit: 6-10 minutes",
-          "Theme-based performance encouraged",
-          "Stage props allowed",
-        ],
-      },
+      { name: "Step-Up", type: "Solo Dance", date: "9th Feb", fee: "₹100", slug: "step-up" },
+      { name: "Yugma", type: "Duet Dance", date: "9th Feb", fee: "₹100/person", slug: "yugma" },
+      { name: "Breakfree", type: "Group Dance", date: "10th Feb", fee: "₹100/person", slug: "breakfree" },
     ],
-    contacts: [
-      { name: "Kanisha Mirg", phone: "Cultural Coordinator" },
-    ],
+    contacts: [{ name: "Kanisha Mirg", phone: "Cultural Coordinator" }],
   },
   {
     id: "meraki",
@@ -61,70 +26,14 @@ const clubs = [
     icon: "🎨",
     color: "from-blue-500 to-cyan-500",
     events: [
-      {
-        name: "Rangotsav",
-        type: "Rangoli Competition",
-        date: "6th Feb",
-        fee: "₹100",
-        rules: [
-          "Time limit: 2 hours",
-          "Materials provided",
-          "Theme will be revealed on spot",
-          "Individual/Duo participation",
-        ],
-      },
-      {
-        name: "Art Alive",
-        type: "Live Painting",
-        date: "7th Feb",
-        fee: "₹100",
-        rules: [
-          "Canvas size: 2x2 feet",
-          "Any medium allowed",
-          "Time limit: 3 hours",
-          "Theme-based",
-        ],
-      },
-      {
-        name: "Chromark",
-        type: "Face Painting",
-        date: "8th Feb",
-        fee: "₹100",
-        rules: [
-          "Pair participation",
-          "Non-toxic colors only",
-          "Time limit: 1 hour",
-          "Theme will be announced",
-        ],
-      },
-      {
-        name: "Sketch Sprint",
-        type: "Speed Sketching",
-        date: "9th Feb",
-        fee: "₹50",
-        rules: [
-          "Time limit: 30 minutes",
-          "Pencil sketching only",
-          "Reference will be provided",
-          "Individual participation",
-        ],
-      },
-      {
-        name: "Captured Creations",
-        type: "Photography",
-        date: "Throughout Fest",
-        fee: "₹100",
-        rules: [
-          "Theme: Campus Life & Fest",
-          "DSLR/Phone allowed",
-          "Minimal editing permitted",
-          "Submit top 3 entries",
-        ],
-      },
+      { name: "Rangotsav", type: "Rangoli Competition", date: "9th Feb", fee: "Free", slug: "rangotsav" },
+      { name: "Art Alive", type: "Face Painting", date: "10th Feb", fee: "Free", slug: "art-alive" },
+      { name: "Chromark", type: "On-Spot Drawing", date: "9th Feb", fee: "Free", slug: "chromark" },
+      { name: "Sketch Sprint", type: "Relay Art", date: "10th Feb", fee: "Free", slug: "sketch-sprint" },
+      { name: "Captured Creations", type: "Online Reel", date: "1-10th Feb", fee: "Free", slug: "captured-creations" },
+      { name: "Galleria", type: "Art Exhibition", date: "11th Feb", fee: "Free", slug: "galleria" },
     ],
-    contacts: [
-      { name: "Aamir Hamid", phone: "Cultural Coordinator" },
-    ],
+    contacts: [{ name: "Aamir Hamid", phone: "Cultural Coordinator" }],
   },
   {
     id: "aaroha",
@@ -133,46 +42,11 @@ const clubs = [
     icon: "🎵",
     color: "from-green-500 to-emerald-500",
     events: [
-      {
-        name: "Mic Drop",
-        type: "Solo Singing",
-        date: "7th Feb",
-        fee: "₹100",
-        rules: [
-          "Time limit: 3-5 minutes",
-          "Any language allowed",
-          "Instrumental tracks permitted",
-          "Live instruments encouraged",
-        ],
-      },
-      {
-        name: "Synergy",
-        type: "Band Battle",
-        date: "10th Feb",
-        fee: "₹500",
-        rules: [
-          "Band size: 3-8 members",
-          "Time limit: 15-20 minutes",
-          "Original compositions bonus",
-          "Own instruments required",
-        ],
-      },
-      {
-        name: "Soundscapes",
-        type: "Instrumental Solo",
-        date: "8th Feb",
-        fee: "₹100",
-        rules: [
-          "Any instrument allowed",
-          "Time limit: 5-7 minutes",
-          "Western/Indian classical",
-          "Own instruments required",
-        ],
-      },
+      { name: "Mic Drop", type: "Solo Singing", date: "10th Feb", fee: "₹100", slug: "mic-drop" },
+      { name: "Synergy", type: "Group Singing", date: "9th Feb", fee: "₹100/person", slug: "synergy" },
+      { name: "Soundscapes", type: "Instrumental Solo", date: "10th Feb", fee: "₹100", slug: "soundscapes" },
     ],
-    contacts: [
-      { name: "Kanisha Mirg", phone: "Cultural Coordinator" },
-    ],
+    contacts: [{ name: "Kanisha Mirg", phone: "Cultural Coordinator" }],
   },
   {
     id: "drishyam",
@@ -181,34 +55,10 @@ const clubs = [
     icon: "🎭",
     color: "from-orange-500 to-red-500",
     events: [
-      {
-        name: "Plot Twist",
-        type: "Nukkad Natak",
-        date: "8th Feb",
-        fee: "₹400",
-        rules: [
-          "Team size: 8-15 members",
-          "Time limit: 10-15 minutes",
-          "Social message mandatory",
-          "Props and costumes allowed",
-        ],
-      },
-      {
-        name: "Spotlight Tales",
-        type: "Mono Act",
-        date: "9th Feb",
-        fee: "₹100",
-        rules: [
-          "Time limit: 5-8 minutes",
-          "Any theme/genre",
-          "Props allowed",
-          "Script can be original/adapted",
-        ],
-      },
+      { name: "Plot Twist", type: "Short Film", date: "11th Feb", fee: "₹500/team", slug: "plot-twist" },
+      { name: "Spotlight Tales", type: "Monologue/Mono Act", date: "10th Feb", fee: "₹100", slug: "spotlight-tales" },
     ],
-    contacts: [
-      { name: "Aamir Hamid", phone: "Cultural Coordinator" },
-    ],
+    contacts: [{ name: "Aamir Hamid", phone: "Cultural Coordinator" }],
   },
   {
     id: "spandan",
@@ -217,58 +67,12 @@ const clubs = [
     icon: "📚",
     color: "from-violet-500 to-purple-500",
     events: [
-      {
-        name: "Cold War",
-        type: "Debate Competition",
-        date: "6th Feb",
-        fee: "₹100",
-        rules: [
-          "Team of 2 (For/Against)",
-          "Topics revealed 30 mins prior",
-          "5 mins speaking, 2 mins rebuttal",
-          "English/Hindi allowed",
-        ],
-      },
-      {
-        name: "Ha Ha Haveli",
-        type: "Stand-up Comedy",
-        date: "10th Feb",
-        fee: "₹100",
-        rules: [
-          "Time limit: 5-7 minutes",
-          "Original content only",
-          "No offensive content",
-          "Props allowed",
-        ],
-      },
-      {
-        name: "No Notes No Mercy",
-        type: "Extempore",
-        date: "7th Feb",
-        fee: "₹50",
-        rules: [
-          "Prep time: 2 minutes",
-          "Speaking time: 3-5 minutes",
-          "Random topic allocation",
-          "Judged on content & delivery",
-        ],
-      },
-      {
-        name: "Visual Verse",
-        type: "Poetry Slam",
-        date: "9th Feb",
-        fee: "₹50",
-        rules: [
-          "Original poetry only",
-          "Time limit: 5 minutes",
-          "Any language",
-          "Performance matters",
-        ],
-      },
+      { name: "Cold War", type: "Debate", date: "10th Feb", fee: "₹100", slug: "cold-war" },
+      { name: "Ha Ha Haveli", type: "Kavi Sammelan", date: "10th Feb", fee: "₹100", slug: "ha-ha-haveli" },
+      { name: "No Notes No Mercy", type: "Declamation", date: "11th Feb", fee: "₹100", slug: "no-notes-no-mercy" },
+      { name: "Visual Verse", type: "Online Poetry", date: "Result: 11th Feb", fee: "Free", slug: "visual-verse" },
     ],
-    contacts: [
-      { name: "Parthsarthi", phone: "Academic Coordinator" },
-    ],
+    contacts: [{ name: "Parthsarthi", phone: "Academic Coordinator" }],
   },
   {
     id: "stellar",
@@ -277,23 +81,9 @@ const clubs = [
     icon: "👗",
     color: "from-amber-500 to-yellow-500",
     events: [
-      {
-        name: "AURA",
-        type: "Fashion Show",
-        date: "11th Feb",
-        fee: "₹1000",
-        rules: [
-          "Theme: Mythologies Around the World",
-          "Team size: 8-16 members",
-          "Time limit: 12-15 minutes",
-          "Original choreography required",
-          "Props and special effects allowed",
-        ],
-      },
+      { name: "AURA", type: "Fashion Show", date: "11th Feb", fee: "₹1000/team", slug: "aura" },
     ],
-    contacts: [
-      { name: "Kanisha Mirg", phone: "Cultural Coordinator" },
-    ],
+    contacts: [{ name: "Kanisha Mirg", phone: "Cultural Coordinator" }],
   },
 ];
 
@@ -382,41 +172,41 @@ const Cultural = () => {
                 {/* Events Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {selectedClub.events.map((event, index) => (
-                    <motion.div
+                    <Link
                       key={event.name}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className={`glass-card p-6 border border-white/10 hover:border-primary/50 transition-all relative overflow-hidden group`}
+                      to={`/cultural/${event.slug}`}
                     >
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-br ${selectedClub.color} opacity-0 group-hover:opacity-10 transition-opacity`}
-                      />
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className={`glass-card p-6 border border-white/10 hover:border-primary/50 transition-all relative overflow-hidden group h-full`}
+                      >
+                        <div
+                          className={`absolute inset-0 bg-gradient-to-br ${selectedClub.color} opacity-0 group-hover:opacity-10 transition-opacity`}
+                        />
 
-                      <div className="relative z-10">
-                        <h3 className="font-display text-xl font-bold text-foreground mb-1">
-                          {event.name}
-                        </h3>
-                        <p className="text-primary text-sm mb-4">{event.type}</p>
+                        <div className="relative z-10">
+                          <h3 className="font-display text-xl font-bold text-foreground mb-1">
+                            {event.name}
+                          </h3>
+                          <p className="text-primary text-sm mb-4">{event.type}</p>
 
-                        <div className="flex gap-4 text-sm text-muted-foreground mb-4">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="w-4 h-4" />
-                            {event.date}
-                          </span>
-                          <span>{event.fee}</span>
+                          <div className="flex gap-4 text-sm text-muted-foreground mb-4">
+                            <span className="flex items-center gap-1">
+                              <Calendar className="w-4 h-4" />
+                              {event.date}
+                            </span>
+                            <span>{event.fee}</span>
+                          </div>
+
+                          <div className="flex items-center gap-2 text-primary text-sm group-hover:gap-3 transition-all">
+                            View Details
+                            <ArrowRight className="w-4 h-4" />
+                          </div>
                         </div>
-
-                        <ul className="text-sm text-muted-foreground space-y-1">
-                          {event.rules.map((rule, i) => (
-                            <li key={i} className="flex items-start gap-2">
-                              <span className="text-primary">•</span>
-                              {rule}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </motion.div>
+                      </motion.div>
+                    </Link>
                   ))}
                 </div>
 
