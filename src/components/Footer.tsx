@@ -53,7 +53,7 @@ const Footer = () => {
           {/* Location & Social */}
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://maps.app.goo.gl/aHXgwkaATquBzdzL8?g_st=aw"
+              href="https://maps.app.goo.gl/WUfCdMetgridUuCj7?g_st=aw"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-neon-outline text-sm py-3 px-6 flex items-center gap-2"

@@ -109,7 +109,7 @@ const HeroSection = () => {
             Brochure
           </Link>
           <a
-            href="https://maps.app.goo.gl/aHXgwkaATquBzdzL8?g_st=aw"
+            href="https://maps.app.goo.gl/WUfCdMetgridUuCj7?g_st=aw"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-neon-outline flex items-center gap-2 text-sm"
