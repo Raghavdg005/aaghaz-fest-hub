@@ -53,7 +53,7 @@ const Footer = () => {
           {/* Location & Social */}
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://maps.app.goo.gl/BNw5VZFidbhWuPCU7"
+              href="https://maps.app.goo.gl/aHXgwkaATquBzdzL8?g_st=aw"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-neon-outline text-sm py-3 px-6 flex items-center gap-2"
@@ -62,7 +62,7 @@ const Footer = () => {
               View Location
             </a>
             <a
-              href="https://www.instagram.com/reel/DNdD0Vxz4E0/"
+              href="https://www.instagram.com/aaghaz.gims?igsh=bTBlbXdldjY5aTg3"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-neon-outline text-sm py-3 px-6 flex items-center gap-2"

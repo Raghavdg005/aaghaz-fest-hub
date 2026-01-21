@@ -60,7 +60,7 @@ const EventsPreview = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <Link to="/sports" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {sportsEvents.map((event, index) => (
               <motion.div
                 key={event.name}
@@ -79,7 +79,7 @@ const EventsPreview = () => {
                 </h3>
               </motion.div>
             ))}
-          </div>
+          </Link>
         </motion.div>
 
         {/* Cultural Zone */}
@@ -109,7 +109,7 @@ const EventsPreview = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <Link to="/cultural" className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {culturalClubs.map((club, index) => (
               <motion.div
                 key={club.name}
@@ -133,7 +133,7 @@ const EventsPreview = () => {
                 <ArrowRight className="absolute bottom-6 right-6 w-5 h-5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             ))}
-          </div>
+          </Link>
         </motion.div>
       </div>
     </section>
