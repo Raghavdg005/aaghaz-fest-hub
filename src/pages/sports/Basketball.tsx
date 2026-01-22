@@ -3,10 +3,10 @@ import EventPageLayout from "@/components/EventPageLayout";
 const Basketball = () => {
   return (
     <EventPageLayout
-      title="Hoops"
+      title="Basketball"
       subtitle="Basketball Championship"
       icon="🏀"
-      dates="5th – 8th February"
+      dates="5th – 8th February 2026"
       fee="₹500 per team"
       teamSize="5 on court (12 max)"
       themeColor="from-orange-600 to-amber-500"
@@ -21,18 +21,19 @@ const Basketball = () => {
       ]}
       ruleSections={[
         {
-          title: "Team Rules",
+          title: "Format",
           items: [
-            "12 players maximum",
-            "5 players on court",
-            "Minimum 5 players required to start",
+            "FIBA rules applicable",
+            "4 quarters × 8 minutes each",
+            "Overtime if scores are tied",
           ],
         },
         {
-          title: "Match Format",
+          title: "Team Composition",
           items: [
-            "4 quarters × 8 minutes each",
-            "Overtime if scores are tied",
+            "Maximum: 12 players per team",
+            "5 players on court at a time",
+            "Minimum 5 players required to start",
           ],
         },
         {
@@ -46,14 +47,13 @@ const Basketball = () => {
         {
           title: "Uniform",
           items: [
-            "Proper numbered jerseys compulsory",
-            "Matching team uniforms required",
+            "Proper jersey with numbers mandatory",
           ],
         },
         {
           title: "Discipline",
           items: [
-            "Unsportsmanlike behavior → disqualification",
+            "Unsportsmanlike conduct → Disqualification",
             "Referee's decision is final",
           ],
         },

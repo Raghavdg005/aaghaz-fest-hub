@@ -4,42 +4,45 @@ const Chromark = () => {
   return (
     <EventPageLayout
       title="Chromark"
-      subtitle="On-Spot Drawing Competition"
+      subtitle="On-the-Spot Drawing Competition"
       icon="🖌️"
-      dates="9th February"
-      fee="Free Entry"
+      dates="9th February 2026"
+      fee="₹100"
       teamSize="Individual"
+      venue="LT-1 / LT-2, Academic Block"
       themeColor="from-blue-500 to-cyan-600"
       backLink="/cultural"
       backLabel="Back to Cultural"
       registrationLink="https://forms.gle/UT3uCjRHc37dje9z7"
       contacts={[
-        { name: "Aamir Hamid", phone: "Cultural Coordinator" },
+        { name: "Kanisha Mirg", phone: "9643688998" },
+        { name: "Aamir Hamid", phone: "7004820042" },
+        { name: "Aarshi Agrawal", phone: "8630428820" },
       ]}
       ruleSections={[
         {
-          title: "Time & Format",
+          title: "Event Details",
+          items: [
+            "Time: 1:00 PM – 3:00 PM",
+            "Theme: Announced on the spot",
+          ],
+        },
+        {
+          title: "Rules",
           items: [
             "Time limit: 1 hour",
-            "Theme announced on spot",
-            "Individual participation only",
+            "Open media (any medium allowed)",
+            "Participants must bring their own materials",
+            "Sheets provided by college",
+            "Artwork must be presented before judges",
+            "Cleanliness must be maintained",
           ],
         },
         {
-          title: "Materials",
+          title: "Code of Conduct",
           items: [
-            "Drawing sheets provided",
-            "Participants bring own colors/pencils",
-            "Any medium allowed (pencil, colors, etc.)",
-          ],
-        },
-        {
-          title: "Judging Criteria",
-          items: [
-            "Creativity & originality",
-            "Theme interpretation",
-            "Technique & skill",
-            "Completion within time",
+            "Report 30 minutes before event",
+            "Carry College ID & BR Card",
           ],
         },
       ]}

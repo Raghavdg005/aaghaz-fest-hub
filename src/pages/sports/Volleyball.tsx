@@ -3,10 +3,10 @@ import EventPageLayout from "@/components/EventPageLayout";
 const Volleyball = () => {
   return (
     <EventPageLayout
-      title="Volley"
+      title="Volleyball"
       subtitle="Volleyball Championship"
       icon="🏐"
-      dates="5th – 8th February"
+      dates="5th – 8th February 2026"
       fee="₹500 per team"
       teamSize="6 on court (12 max)"
       themeColor="from-yellow-500 to-orange-500"
@@ -21,14 +21,6 @@ const Volleyball = () => {
       ]}
       ruleSections={[
         {
-          title: "Team Rules",
-          items: [
-            "6 players on court",
-            "Maximum 12 players per team",
-            "1 Libero allowed",
-          ],
-        },
-        {
           title: "Match Format",
           items: [
             "Best of 3 sets",
@@ -37,18 +29,17 @@ const Volleyball = () => {
           ],
         },
         {
-          title: "Rules",
+          title: "Team Composition",
           items: [
-            "No double hit allowed",
-            "Net touch not allowed",
-            "Rotation must be followed",
-            "Standard volleyball rules apply",
+            "6 players on court",
+            "Maximum 12 players per team",
+            "Libero allowed",
           ],
         },
         {
           title: "Discipline",
           items: [
-            "Unsportsmanlike conduct → disqualification",
+            "Unsportsmanlike conduct → Disqualification",
             "Referee's decision is final",
           ],
         },
