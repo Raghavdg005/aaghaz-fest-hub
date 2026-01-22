@@ -4,42 +4,50 @@ const PlotTwist = () => {
   return (
     <EventPageLayout
       title="Plot Twist"
-      subtitle="Short Film Competition"
+      subtitle="Twisted Films Competition"
       icon="🎬"
-      dates="11th February"
-      fee="₹500 per team"
-      teamSize="Team"
+      dates="11th February 2026"
+      fee="₹100 per participant"
+      teamSize="Maximum 15 members"
+      venue="Sanjeevani Hall, Academic Block"
       themeColor="from-slate-600 to-zinc-700"
       backLink="/cultural"
       backLabel="Back to Cultural"
       registrationLink="https://forms.gle/UT3uCjRHc37dje9z7"
       contacts={[
-        { name: "Aamir Hamid", phone: "Cultural Coordinator" },
+        { name: "Kanisha Mirg", phone: "9643688998" },
+        { name: "Aamir Hamid", phone: "7004820042" },
+        { name: "Kushagra Saxena", phone: "9220536297" },
       ]}
       ruleSections={[
         {
-          title: "Format",
+          title: "Event Details",
           items: [
-            "Duration: 10–20 minutes",
-            "Pre-recorded submission",
-            "Screening on 11th February",
+            "Time: 1:30 PM – 3:30 PM",
+          ],
+        },
+        {
+          title: "Rules",
+          items: [
+            "Film duration: 10–20 minutes",
+            "Maximum team size: 15 participants",
+            "Theme must include a twist / unconventional ending",
+            "No offensive or explicit content",
+            "Exceeding time limit leads to negative marking",
+            "Judges' decision will be final",
           ],
         },
         {
           title: "Requirements",
           items: [
-            "Original content only",
-            "Any language allowed (subtitles if non-English)",
-            "HD quality minimum",
+            "Any multimedia support must be submitted one day prior",
           ],
         },
         {
-          title: "Judging Criteria",
+          title: "Code of Conduct",
           items: [
-            "Storytelling & screenplay",
-            "Cinematography & editing",
-            "Acting & direction",
-            "Theme & message",
+            "Report 30 minutes before event",
+            "Carry College ID & BR Card",
           ],
         },
       ]}

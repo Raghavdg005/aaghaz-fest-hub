@@ -4,41 +4,52 @@ const CapturedCreations = () => {
   return (
     <EventPageLayout
       title="Captured Creations"
-      subtitle="Online Reel Competition"
+      subtitle="Online Art Reel Competition"
       icon="📸"
-      dates="1st – 10th February"
-      fee="Free Entry"
+      dates="1st – 10th February 2026"
+      fee="₹100"
       teamSize="Individual"
       themeColor="from-pink-600 to-rose-500"
       backLink="/cultural"
       backLabel="Back to Cultural"
       registrationLink="https://forms.gle/UT3uCjRHc37dje9z7"
       contacts={[
-        { name: "Aamir Hamid", phone: "Cultural Coordinator" },
+        { name: "Kanisha Mirg", phone: "9643688998" },
+        { name: "Aamir Hamid", phone: "7004820042" },
+        { name: "Aarshi Agrawal", phone: "8630428820" },
       ]}
       ruleSections={[
         {
-          title: "Format",
+          title: "Event Details",
           items: [
-            "Duration: 30–60 seconds",
-            "Platform: Instagram",
-            "Submission period: 1st – 10th February",
+            "Duration: 1st – 10th February 2026",
+            "Result Declaration: 11th February 2026",
+            "Mode: Online (Instagram)",
           ],
         },
         {
-          title: "Requirements",
+          title: "Rules",
           items: [
-            "Original content only",
-            "Tag @aaghaz.gims on Instagram",
-            "Use designated hashtags",
+            "Open to all medical students",
+            "Reel duration: 30–60 seconds",
+            "Reel must be original",
+            "Must be posted on a public Instagram account",
+            "Follow @gims_meraki",
+            "Use hashtags: #MerakiGIMS #CollegeCreatives",
+            "Tag @gims_meraki",
+            "Only one entry allowed",
+            "No watermarks allowed",
+            "Late entries will not be accepted",
           ],
         },
         {
           title: "Judging Criteria",
           items: [
-            "Creativity & storytelling",
-            "Video quality & editing",
-            "Engagement & reach",
+            "Creativity & originality",
+            "Relevance",
+            "Storytelling",
+            "Editing & presentation",
+            "Overall impact",
           ],
         },
       ]}

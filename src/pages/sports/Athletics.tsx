@@ -6,7 +6,7 @@ const Athletics = () => {
       title="Athletics"
       subtitle="Track & Field Events"
       icon="🏃"
-      dates="8th February"
+      dates="8th February 2026"
       fee="Individual: ₹100 | Relay/Tug of War: ₹500"
       teamSize="Individual / Team"
       themeColor="from-red-500 to-rose-600"
@@ -27,7 +27,8 @@ const Athletics = () => {
             "200m Sprint",
             "400m Race",
             "800m Race (Men only)",
-            "Relay Race",
+            "4×100 Relay",
+            "Mixed Relay",
           ],
         },
         {
@@ -35,21 +36,15 @@ const Athletics = () => {
           items: [
             "Shot Put",
             "Long Jump",
-          ],
-        },
-        {
-          title: "Team Events",
-          items: [
             "Tug of War",
           ],
         },
         {
-          title: "General Rules",
+          title: "Rules",
           items: [
-            "Standard athletics rules apply",
-            "False start → disqualification",
+            "Standard athletic rules apply",
+            "False start = disqualification",
             "Best attempt counted for field events",
-            "Proper athletic wear mandatory",
           ],
         },
       ]}

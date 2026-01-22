@@ -4,42 +4,46 @@ const Rangotsav = () => {
   return (
     <EventPageLayout
       title="Rangotsav"
-      subtitle="Rangoli Competition"
+      subtitle="Rangoli Making Competition"
       icon="🎨"
-      dates="9th February"
-      fee="Free Entry"
+      dates="9th February 2026"
+      fee="₹100"
       teamSize="Maximum 4 members"
+      venue="Foyer Area, Academic Block"
       themeColor="from-pink-500 to-rose-600"
       backLink="/cultural"
       backLabel="Back to Cultural"
       registrationLink="https://forms.gle/UT3uCjRHc37dje9z7"
       contacts={[
-        { name: "Aamir Hamid", phone: "Cultural Coordinator" },
+        { name: "Kanisha Mirg", phone: "9643688998" },
+        { name: "Aamir Hamid", phone: "7004820042" },
+        { name: "Aarshi Agrawal", phone: "8630428820" },
       ]}
       ruleSections={[
         {
-          title: "Time & Format",
+          title: "Event Details",
           items: [
-            "Time limit: 90 minutes",
+            "Time: 10:00 AM – 12:00 PM",
+            "Theme: To be announced on Instagram",
+          ],
+        },
+        {
+          title: "Rules",
+          items: [
             "Team of maximum 4 members",
-            "Theme will be announced prior",
+            "Time limit: 90 minutes",
+            "No stencils, stickers, or artificial décor",
+            "No spray paints or chemicals",
+            "Colours provided by college",
+            "Rangoli must be floor-based",
+            "Plagiarism strictly prohibited",
           ],
         },
         {
-          title: "Materials",
+          title: "Code of Conduct",
           items: [
-            "Basic materials provided",
-            "Additional materials can be brought",
-            "Natural colors preferred",
-          ],
-        },
-        {
-          title: "Judging Criteria",
-          items: [
-            "Creativity & originality",
-            "Color combination",
-            "Theme interpretation",
-            "Neatness & finish",
+            "Report 30 minutes before event",
+            "Carry College ID & BR Card",
           ],
         },
       ]}

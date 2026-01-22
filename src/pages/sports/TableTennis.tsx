@@ -3,11 +3,11 @@ import EventPageLayout from "@/components/EventPageLayout";
 const TableTennis = () => {
   return (
     <EventPageLayout
-      title="TT Supreme"
+      title="Table Tennis"
       subtitle="Table Tennis Championship"
       icon="🏓"
-      dates="5th – 8th February"
-      fee="Singles: ₹100 | Doubles: ₹200"
+      dates="5th – 8th February 2026"
+      fee="Singles: ₹100 | Doubles: ₹200 per team"
       teamSize="Singles / Doubles"
       themeColor="from-orange-500 to-red-500"
       backLink="/sports"
@@ -33,36 +33,29 @@ const TableTennis = () => {
           items: [
             "Best of 3 sets",
             "11 points per set",
-            "Rally point scoring",
+            "Rally scoring system",
           ],
         },
         {
           title: "Rules",
           items: [
             "Service changes every 2 points",
-            "At 10–10 → win by 2 points",
-            "Ends change after each set",
+            "Deuce at 10–10 (win by 2 points)",
+            "Players change ends after each set",
           ],
         },
         {
           title: "Equipment",
           items: [
-            "Players bring own racquets",
-            "Balls & tables provided",
+            "Players must bring own racquets",
+            "Balls & tables provided by organizers",
           ],
         },
         {
           title: "Discipline",
           items: [
-            "Misconduct → Disqualification",
-            "Referee's decision final",
-          ],
-        },
-        {
-          title: "Reporting",
-          items: [
-            "Report 10–15 minutes early",
-            "Late arrival → walkover",
+            "Misconduct leads to disqualification",
+            "Referee's decision is final",
           ],
         },
       ]}

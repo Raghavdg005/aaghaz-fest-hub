@@ -4,49 +4,43 @@ const Aura = () => {
   return (
     <EventPageLayout
       title="AURA"
-      subtitle="Fashion Show"
+      subtitle="The Fashion Edit – Fashion Show Competition"
       icon="👗"
-      dates="11th February"
-      fee="₹1000 per team"
+      dates="11th February 2026"
+      fee="₹100 per participant"
       teamSize="7–10 members"
+      venue="Central Block, Academic Block"
       themeColor="from-amber-500 to-yellow-400"
       backLink="/cultural"
       backLabel="Back to Cultural"
       registrationLink="https://forms.gle/UT3uCjRHc37dje9z7"
       contacts={[
-        { name: "Kanisha Mirg", phone: "Cultural Coordinator" },
+        { name: "Kanisha Mirg", phone: "9643688998" },
+        { name: "Aamir Hamid", phone: "7004820042" },
+        { name: "Ananya Sidhu", phone: "8368183154" },
       ]}
       ruleSections={[
         {
-          title: "Team Composition",
+          title: "Event Details",
           items: [
-            "Minimum: 7 members",
-            "Maximum: 10 members",
-          ],
-        },
-        {
-          title: "Performance",
-          items: [
+            "Time: 11:00 AM – 1:00 PM",
             "Theme: Mythologies Around the World",
-            "Time limit: 12–15 minutes",
-            "Original choreography required",
           ],
         },
         {
-          title: "Requirements",
+          title: "Rules",
           items: [
-            "Props and special effects allowed",
-            "Costumes must align with theme",
-            "Music track submission required",
+            "Group participation: 7–10 members per team",
+            "Time limit: 10 minutes per team",
+            "Exceeding the time limit may result in negative marking",
+            "Judges' decision will be final and binding",
           ],
         },
         {
-          title: "Judging Criteria",
+          title: "Code of Conduct",
           items: [
-            "Theme interpretation",
-            "Costume design & creativity",
-            "Choreography & walk",
-            "Overall presentation & impact",
+            "Participants must report 30 minutes prior to the event",
+            "Carry College ID & BR Card compulsorily",
           ],
         },
       ]}

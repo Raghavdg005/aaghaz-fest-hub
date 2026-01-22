@@ -3,10 +3,10 @@ import EventPageLayout from "@/components/EventPageLayout";
 const Chess = () => {
   return (
     <EventPageLayout
-      title="Pawn"
+      title="Chess"
       subtitle="Chess Championship"
       icon="♟️"
-      dates="5th – 8th February"
+      dates="5th – 8th February 2026"
       fee="₹500 per team"
       teamSize="Team of 5 players"
       themeColor="from-slate-600 to-zinc-800"
@@ -23,26 +23,16 @@ const Chess = () => {
         {
           title: "Format",
           items: [
-            "Team of 5 players",
-            "Fixed board order",
-            "All 5 boards play simultaneously",
-          ],
-        },
-        {
-          title: "Time Control",
-          items: [
-            "10+5 (Rapid format)",
-            "10 minutes base time",
-            "5 seconds increment per move",
+            "Team event (5 players)",
+            "10+5 time control (Rapid format)",
           ],
         },
         {
           title: "Rules",
           items: [
-            "FIDE rules apply",
-            "No 50-move rule",
-            "No threefold repetition claim",
-            "No talking during match",
+            "FIDE rules applicable",
+            "No draw claims by repetition",
+            "No outside communication allowed",
           ],
         },
         {

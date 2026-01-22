@@ -6,9 +6,10 @@ const Football = () => {
       title="7v7 Football"
       subtitle="Battle for glory on the turf"
       icon="⚽"
-      dates="5th – 8th February"
+      dates="5th – 8th February 2026"
       fee="₹500 per team"
-      teamSize="7 players + 3 subs"
+      teamSize="7 players + 3 subs (Max 10)"
+      venue="Sports Ground"
       themeColor="from-green-500 to-emerald-600"
       backLink="/sports"
       backLabel="Back to Sports"
@@ -57,7 +58,7 @@ const Football = () => {
           items: [
             "Proper sports shoes mandatory",
             "Metal studs strictly prohibited",
-            "Proper numbered jerseys compulsory",
+            "Team jerseys with visible numbers mandatory",
           ],
         },
         {

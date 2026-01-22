@@ -3,11 +3,11 @@ import EventPageLayout from "@/components/EventPageLayout";
 const Carrom = () => {
   return (
     <EventPageLayout
-      title="Goti"
+      title="Carrom"
       subtitle="Carrom Championship"
       icon="🎯"
-      dates="5th – 8th February"
-      fee="₹100 per player"
+      dates="5th – 8th February 2026"
+      fee="₹100 per participant"
       teamSize="Singles"
       themeColor="from-amber-600 to-yellow-700"
       backLink="/sports"
@@ -24,7 +24,8 @@ const Carrom = () => {
           title: "Format",
           items: [
             "Knockout tournament",
-            "Singles format only",
+            "Singles event",
+            "One-day event",
           ],
         },
         {
@@ -32,22 +33,7 @@ const Carrom = () => {
           items: [
             "Standard carrom rules apply",
             "Queen cover mandatory",
-            "Silent play required",
-            "No coaching during match",
-          ],
-        },
-        {
-          title: "Equipment",
-          items: [
-            "Carrom boards provided",
-            "Powder provided by organizers",
-          ],
-        },
-        {
-          title: "Discipline",
-          items: [
-            "Unsportsmanlike behavior not tolerated",
-            "Referee's decision is final",
+            "Silence during play",
           ],
         },
       ]}

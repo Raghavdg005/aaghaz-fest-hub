@@ -3,10 +3,10 @@ import EventPageLayout from "@/components/EventPageLayout";
 const Badminton = () => {
   return (
     <EventPageLayout
-      title="Shuttle"
+      title="Badminton"
       subtitle="Badminton Championship"
       icon="🏸"
-      dates="5th – 8th February"
+      dates="5th – 8th February 2026"
       fee="Singles: ₹100 | Doubles: ₹200"
       teamSize="Singles / Doubles"
       themeColor="from-cyan-500 to-blue-600"
@@ -32,30 +32,24 @@ const Badminton = () => {
         {
           title: "Match Format",
           items: [
-            "Initial rounds: Best of 3 (11 points)",
-            "Finals: Best of 3 (21 points)",
-          ],
-        },
-        {
-          title: "Rules",
-          items: [
-            "Rally point system",
-            "2-point lead required to win",
-            "60-second break between sets",
+            "Early rounds: 11 points per set",
+            "Finals: 21 points per set",
+            "Best of 3 sets",
           ],
         },
         {
           title: "Equipment",
           items: [
-            "Players bring own racquets",
+            "Players must bring own racquets",
             "Shuttle provided by organizers",
           ],
         },
         {
-          title: "Reporting",
+          title: "Discipline",
           items: [
-            "Report 15 minutes early",
-            "Late arrival may result in walkover",
+            "Late arrival → Walkover",
+            "Misconduct → Disqualification",
+            "Referee's decision is final",
           ],
         },
       ]}
