@@ -197,7 +197,6 @@ const Cultural = () => {
                               <Calendar className="w-4 h-4" />
                               {event.date}
                             </span>
-                            <span>{event.fee}</span>
                           </div>
 
                           <div className="flex items-center gap-2 text-primary text-sm group-hover:gap-3 transition-all">

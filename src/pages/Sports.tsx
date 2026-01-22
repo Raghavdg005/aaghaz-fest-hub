@@ -78,9 +78,6 @@ const Sports = () => {
                         <span className="flex items-center gap-1 text-muted-foreground">
                           <Calendar className="w-4 h-4" /> {event.date}
                         </span>
-                        <span className="flex items-center gap-1 text-muted-foreground">
-                          <IndianRupee className="w-4 h-4" /> {event.fee}
-                        </span>
                       </div>
                     </div>
                     <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all" />
