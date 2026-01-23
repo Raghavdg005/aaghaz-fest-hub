@@ -8,7 +8,7 @@ const Aura = () => {
       icon="👗"
       dates="11th February 2026"
       fee="₹100 per participant"
-      teamSize="7–10 members"
+      teamSize="7–15 members"
       venue="Central Block, Academic Block"
       themeColor="from-amber-500 to-yellow-400"
       backLink="/cultural"
