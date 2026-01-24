@@ -40,7 +40,7 @@ const Yugma = () => {
           title: "Code of Conduct",
           items: [
             "Report 30 minutes before event",
-            "Carry College ID & BR Card",
+            "Carry College ID",
             "Obscene content leads to disqualification",
           ],
         },

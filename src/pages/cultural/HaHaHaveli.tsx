@@ -41,7 +41,7 @@ const HaHaHaveli = () => {
           title: "Code of Conduct",
           items: [
             "Report 30 minutes prior",
-            "Carry College ID & BR Card",
+            "Carry College ID",
           ],
         },
       ]}
