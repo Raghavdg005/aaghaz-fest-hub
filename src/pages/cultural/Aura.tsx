@@ -30,7 +30,7 @@ const Aura = () => {
         {
           title: "Rules",
           items: [
-            "Group participation: 7–10 members per team",
+            "Group participation: 7–15 members per team",
             "Time limit: 10 minutes per team",
             "Exceeding the time limit may result in negative marking",
             "Judges' decision will be final and binding",
@@ -40,7 +40,7 @@ const Aura = () => {
           title: "Code of Conduct",
           items: [
             "Participants must report 30 minutes prior to the event",
-            "Carry College ID & BR Card compulsorily",
+            "Carry College ID compulsorily",
           ],
         },
       ]}
