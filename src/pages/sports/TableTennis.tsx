@@ -13,6 +13,7 @@ const TableTennis = () => {
       backLink="/sports"
       backLabel="Back to Sports"
       registrationLink="https://forms.gle/p4Vc7suxnNLh2TWd8"
+      winners={["GIMS (Men's Singles)", "GIMS (Men's Doubles)"]}
       contacts={[
         { name: "Aadi Joshi", phone: "9625570511" },
         { name: "Aarshi Agrawal", phone: "8630428820" },

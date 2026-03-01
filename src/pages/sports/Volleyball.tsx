@@ -13,6 +13,7 @@ const Volleyball = () => {
       backLink="/sports"
       backLabel="Back to Sports"
       registrationLink="https://forms.gle/p4Vc7suxnNLh2TWd8"
+      winners={["MMCH (Boys)"]}
       contacts={[
         { name: "Aadi Joshi", phone: "9625570511" },
         { name: "Aarshi Agrawal", phone: "8630428820" },
