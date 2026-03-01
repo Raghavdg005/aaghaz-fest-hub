@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Phone, ExternalLink, Calendar, Users, IndianRupee } from "lucide-react";
+import { ArrowLeft, Phone, ExternalLink, Calendar, Users, IndianRupee, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -22,13 +22,14 @@ interface EventPageLayoutProps {
   fee: string;
   teamSize?: string;
   venue?: string;
-  themeColor: string; // Tailwind gradient classes
+  themeColor: string;
   bgPattern?: string;
   ruleSections: RuleSection[];
   contacts: Contact[];
   registrationLink: string;
   backLink: string;
   backLabel: string;
+  winners?: string[];
 }
 
 const EventPageLayout = ({
@@ -46,6 +47,7 @@ const EventPageLayout = ({
   registrationLink,
   backLink,
   backLabel,
+  winners,
 }: EventPageLayoutProps) => {
   return (
     <div className="min-h-screen bg-background">
@@ -137,6 +139,42 @@ const EventPageLayout = ({
           </motion.div>
         </div>
       </section>
+
+      {/* Winners Section */}
+      {winners && winners.length > 0 && (
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="glass-card p-8 text-center border border-yellow-500/30"
+            >
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Trophy className="w-8 h-8 text-yellow-400" />
+                <h3 className="font-display text-2xl font-bold text-foreground">
+                  🏆 Winners
+                </h3>
+                <Trophy className="w-8 h-8 text-yellow-400" />
+              </div>
+              <div className="flex flex-wrap justify-center gap-3">
+                {winners.map((winner, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    className={`px-4 py-2 rounded-full bg-gradient-to-r ${themeColor} text-white font-medium text-sm`}
+                  >
+                    {winner}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Rules & Regulations */}
       <section className="py-16 px-4">

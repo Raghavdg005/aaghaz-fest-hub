@@ -14,6 +14,7 @@ const ArtAlive = () => {
       backLink="/cultural"
       backLabel="Back to Cultural"
       registrationLink="https://forms.gle/UT3uCjRHc37dje9z7"
+      winners={["Fiza Naaz"]}
       contacts={[
         { name: "Kanisha Mirg", phone: "9643688998" },
         { name: "Aamir Hamid", phone: "7004820042" },
