@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Trophy, Palette, FileText, MapPin } from "lucide-react";
+import { Sparkles, Trophy, Palette, FileText, MapPin, Camera } from "lucide-react";
 import { Link } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -116,6 +116,15 @@ const HeroSection = () => {
           >
             <MapPin className="w-4 h-4" />
             Location
+          </a>
+          <a
+            href="https://drive.google.com/drive/folders/1fJCD5v1btRtWRaAAB1WhGNA-cPIi4L-o"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-neon-outline flex items-center gap-2 text-sm"
+          >
+            <Camera className="w-4 h-4" />
+            Album
           </a>
         </motion.div>
       </div>
