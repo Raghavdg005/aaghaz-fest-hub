@@ -14,6 +14,7 @@ const NoNotesNoMercy = () => {
       backLink="/cultural"
       backLabel="Back to Cultural"
       registrationLink="https://forms.gle/UT3uCjRHc37dje9z7"
+      winners={["Rashi Sharma"]}
       contacts={[
         { name: "ParthSarthi", phone: "8081872289" },
         { name: "Rashi Sharma", phone: "9971956712" },

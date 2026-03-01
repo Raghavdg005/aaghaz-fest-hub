@@ -14,6 +14,7 @@ const PlotTwist = () => {
       backLink="/cultural"
       backLabel="Back to Cultural"
       registrationLink="https://forms.gle/UT3uCjRHc37dje9z7"
+      winners={["Ohm Singh", "Ayush Joshi", "Nikhil Kamal", "Yagya Manchanda", "Kshitij Joshi", "Himanshu Palleywal", "Aakash Katiyar", "Pragati Gangwar", "Harsh", "Yasharth Kaushik", "Priyanshu Kumari", "Antriksh Verma"]}
       contacts={[
         { name: "Kanisha Mirg", phone: "9643688998" },
         { name: "Aamir Hamid", phone: "7004820042" },
