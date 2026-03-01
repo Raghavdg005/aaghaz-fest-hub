@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Sparkles, Gift } from "lucide-react";
+import { Sparkles, MapPin, Clock, Mic } from "lucide-react";
+import mohitDudeja from "@/assets/mohit-dudeja.jpg";
 
 const SurpriseEvent = () => {
   return (
@@ -11,7 +12,7 @@ const SurpriseEvent = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto text-center"
+          className="max-w-4xl mx-auto text-center"
         >
           <motion.div
             animate={{
@@ -31,30 +32,45 @@ const SurpriseEvent = () => {
             >
               <Sparkles className="w-8 h-8" />
             </motion.div>
-            
+
+            <h2 className="font-display text-3xl sm:text-5xl font-bold text-neon mb-6">
+              SPECIAL EVENT
+            </h2>
+
+            {/* Mohit Dudeja Image */}
             <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-6"
             >
-              <Gift className="w-10 h-10 text-white" />
+              <img
+                src={mohitDudeja}
+                alt="Mohit Dudeja - Stand Up Comedian"
+                className="w-64 sm:w-80 mx-auto rounded-2xl border-2 border-primary/30 shadow-lg shadow-primary/20"
+              />
             </motion.div>
 
-            <h2 className="font-display text-3xl sm:text-5xl font-bold text-neon mb-4">
-              SURPRISE EVENT
-            </h2>
-            
-            <p className="text-xl sm:text-2xl text-accent font-display mb-4">
-              11th February
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <Mic className="w-6 h-6 text-accent" />
+              <h3 className="font-display text-2xl sm:text-4xl font-bold text-accent">
+                MOHIT DUDEJA
+              </h3>
+            </div>
+            <p className="text-lg sm:text-xl text-muted-foreground mb-6">
+              Stand Up Comedian
             </p>
-            
-            <motion.p
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="text-lg sm:text-xl text-muted-foreground italic"
-            >
-              "Expect the Unexpected!"
-            </motion.p>
+
+            <div className="flex flex-wrap justify-center gap-4 text-foreground/80">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm border border-accent/30">
+                <Clock className="w-4 h-4 text-accent" />
+                11th February • 2:30 PM
+              </span>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm border border-accent/30">
+                <MapPin className="w-4 h-4 text-accent" />
+                Amphitheater
+              </span>
+            </div>
 
             <div className="mt-8 flex justify-center gap-2">
               {[...Array(5)].map((_, i) => (
